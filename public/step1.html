@@ -1,1 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finalizar Pedido — Passo 1 de 3</title>
+  <link rel="stylesheet" href="/checkout-light.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="/">← Voltar para a loja</a>
+    </div>
+
+    <h1 style="text-align:center;margin:0 0 6px;">Finalizar Pedido</h1>
+    <div class="progress"><div class="fill"></div></div>
+    <div class="steps"><span class="active">Dados Pessoais</span><span>Entrega</span><span>Pagamento</span></div>
+
+    <section class="card" aria-labelledby="dados-title">
+      <h1 id="dados-title">Dados Pessoais</h1>
+      <h2>Etapa 1 de 3</h2>
+
+      <form id="step1" class="form" novalidate>
+        <label class="label">Nome Completo *
+          <input class="input" name="name" placeholder="Seu nome completo" required />
+        </label>
+        <label class="label">E-mail *
+          <input class="input" type="email" name="email" placeholder="seu@email.com" required />
+        </label>
+        <label class="label">WhatsApp *
+          <input class="input" name="whatsapp" placeholder="(11) 99999-9999" required />
+        </label>
+
+        <div style="grid-column:1/-1" class="notice">
+          <b>Seus dados estão seguros conosco!</b>
+          • Utilizamos seus dados apenas para processar seu pedido.<br/>
+          • Você receberá atualizações do pedido via WhatsApp.
+        </div>
+
+        <div style="grid-column:1/-1" class="actions">
+          <button type="submit" class="btn">Continuar</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('step1').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Dados salvos! (próximo passo seria ir para entrega)');
+    });
+  </script>
+</body>
+</html>
 
